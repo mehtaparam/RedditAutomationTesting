@@ -5,7 +5,7 @@
 	1) Created constant package which consist classed for constant values for Test data ( We can Use DB or Excel or etc. data source in future) and Configurations
 	2) Created model package to create/store required models (Bean classed)
 	3) Created page element package to create/store required xpaths organized by pages to identify and modify them easily.
-	4) Created page element utilities which consists SeleniumUtilites who overrides Selenium methods and add functionalities of error handling and other common features
+	4) Created utilities package which consists SeleniumUtilites who overrides Selenium methods and add functionalities of error handling and other common features
 	5) Created testFiles package which consist RedittTest (TestNG class) to define test.
 	6) Created testng.xml to run Test
 	
