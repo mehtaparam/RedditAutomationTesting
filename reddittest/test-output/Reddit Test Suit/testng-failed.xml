@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Reddit Test Suit]">
+  <test name="Data Gathering(failed)">
+    <classes>
+      <class name="testfiles.RedittTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="testLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testfiles.RedittTest -->
+    </classes>
+  </test> <!-- Data Gathering(failed) -->
+</suite> <!-- Failed suite [Reddit Test Suit] -->

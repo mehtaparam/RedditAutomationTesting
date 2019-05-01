@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="55114" started-at="2019-05-01T19:51:14Z" finished-at="2019-05-01T19:52:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="55114" started-at="2019-05-01T19:51:14Z" finished-at="2019-05-01T19:52:09Z">
+      <class name="testFiles.RedittTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testFiles.RedittTest@224edc67]" name="setUp" is-config="true" duration-ms="7339" started-at="2019-05-02T01:21:07Z" finished-at="2019-05-02T01:21:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:testFiles.RedittTest@224edc67]" name="testLogin" duration-ms="54108" started-at="2019-05-02T01:21:14Z" finished-at="2019-05-02T01:22:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testFiles.RedittTest@224edc67]" name="tearDown" is-config="true" duration-ms="989" started-at="2019-05-02T01:22:08Z" finished-at="2019-05-02T01:22:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testFiles.RedittTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
