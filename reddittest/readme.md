@@ -2,13 +2,12 @@
 1. Created Maven Project
 2. Added needed dependencies in .pom file
 3. Made Framework setup to organize our test using modular approach
-
-	-> Created constant package which consist classed for constant values for Test data ( We can Use DB or Excel or etc. data source in future) and Configurations
-	-> Created model package to create/store required models (Bean classed)
-	-> Created page element package to create/store required xpaths organized by pages to identify and modify them easily.
-	-> Created page element utilities which consists SeleniumUtilites who overrides Selenium methods and add functionalities of error handling and other common features
-	-> Created testFiles package which consist RedittTest (TestNG class) to define test.
-	-> Created testng.xml to run Test
+	1) Created constant package which consist classed for constant values for Test data ( We can Use DB or Excel or etc. data source in future) and Configurations
+	2) Created model package to create/store required models (Bean classed)
+	3) Created page element package to create/store required xpaths organized by pages to identify and modify them easily.
+	4) Created page element utilities which consists SeleniumUtilites who overrides Selenium methods and add functionalities of error handling and other common features
+	5) Created testFiles package which consist RedittTest (TestNG class) to define test.
+	6) Created testng.xml to run Test
 	
 *************************** How To Setup? ***************************
 
