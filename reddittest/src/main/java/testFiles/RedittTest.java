@@ -70,6 +70,8 @@ public class RedittTest extends SeleniumUtilities {
 				// After enter Credentials let's try to Login by clicking Login Button
 				click(LoginPageElements.signInButton);
 
+				
+				// It will try to identify possible error message invalid username and password only if CHECK_FOR_ERRORS is true 
 				if (ConfigConstants.CHECK_FOR_ERRORS) {
 					if (waitForElement(LoginPageElements.incorrectUserNameErrorMessage,
 							ConfigConstants.ERROR_MSG__WAIT_SECONDS)) {
