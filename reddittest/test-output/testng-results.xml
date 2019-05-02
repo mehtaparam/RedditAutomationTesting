@@ -1,25 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="RedditTestSuit" duration-ms="42106" started-at="2019-05-01T20:46:05Z" finished-at="2019-05-01T20:46:47Z">
+  <suite name="Default suite" duration-ms="70665" started-at="2019-05-02T22:13:02Z" finished-at="2019-05-02T22:14:13Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="42106" started-at="2019-05-01T20:46:05Z" finished-at="2019-05-01T20:46:47Z">
+    <test name="Default test" duration-ms="70665" started-at="2019-05-02T22:13:02Z" finished-at="2019-05-02T22:14:13Z">
       <class name="testFiles.RedittTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testFiles.RedittTest@224edc67]" name="setUp" is-config="true" duration-ms="7245" started-at="2019-05-02T02:15:58Z" finished-at="2019-05-02T02:16:05Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="setUp" is-config="true" duration-ms="20669" started-at="2019-05-03T03:42:42Z" finished-at="2019-05-03T03:43:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:testFiles.RedittTest@224edc67]" name="testLogin" duration-ms="41088" started-at="2019-05-02T02:16:05Z" finished-at="2019-05-02T02:16:46Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-03T03:43:02Z" finished-at="2019-05-03T03:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="testLogin" duration-ms="13718" started-at="2019-05-03T03:43:02Z" finished-at="2019-05-03T03:43:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testFiles.RedittTest@224edc67]" name="tearDown" is-config="true" duration-ms="998" started-at="2019-05-02T02:16:46Z" finished-at="2019-05-02T02:16:47Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="getResult" is-config="true" duration-ms="2" started-at="2019-05-03T03:43:16Z" finished-at="2019-05-03T03:43:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=SUCCESS method=RedittTest.testLogin()[pri:0, instance:testFiles.RedittTest@59fa1d9b] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-03T03:43:16Z" finished-at="2019-05-03T03:43:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="getSortedPosts()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="getSortedPosts" duration-ms="56907" started-at="2019-05-03T03:43:16Z" finished-at="2019-05-03T03:44:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getSortedPosts -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="getResult" is-config="true" duration-ms="0" started-at="2019-05-03T03:44:13Z" finished-at="2019-05-03T03:44:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getSortedPosts status=SUCCESS method=RedittTest.getSortedPosts()[pri:0, instance:testFiles.RedittTest@59fa1d9b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="teardown" is-config="true" duration-ms="1107" started-at="2019-05-03T03:44:13Z" finished-at="2019-05-03T03:44:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- testFiles.RedittTest -->
-    </test> <!-- Test -->
-  </suite> <!-- RedditTestSuit -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

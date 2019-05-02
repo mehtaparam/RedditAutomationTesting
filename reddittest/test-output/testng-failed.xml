@@ -5,9 +5,11 @@
     <classes>
       <class name="testFiles.RedittTest">
         <methods>
-          <include name="testLogin"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="getSortedPosts"/>
+          <include name="getResult"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- testFiles.RedittTest -->
     </classes>
