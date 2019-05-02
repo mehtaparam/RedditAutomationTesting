@@ -1,5 +1,8 @@
 package utilities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -8,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import constants.ConfigConstants;
 import model.WebPageElements;
 
 public class SeleniumUtilities {
@@ -44,6 +48,72 @@ public class SeleniumUtilities {
 		}
 		return ele;
 	}
+	
+	
+	public List<WebElement> getWebElements(WebPageElements element) {
+		List ele = null;
+		try {
+			if (element.getLocator().equalsIgnoreCase("xpath")) {
+				ele = driver.findElements(By.xpath(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("id")) {
+				ele = driver.findElements(By.id(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("name")) {
+				ele = driver.findElements(By.name(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("linktext")) {
+				ele = driver.findElements(By.linkText(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("partiallinktext")) {
+				ele = driver.findElements(By.partialLinkText(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("classname")) {
+				ele = driver.findElements(By.className(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("tagname")) {
+				ele = driver.findElements(By.tagName(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("css")) {
+				ele = driver.findElements(By.cssSelector(element.getValue()));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Not able to find elements for " + element.getName());
+			// Assert.fail();
+		}
+		if (ele == null) {
+			Assert.fail("Not able to find elements for " + element.getName());
+		}
+		return ele;
+	}
+	
+	public WebElement getChildWebElement(WebPageElements element,WebPageElements parentElement) {
+		WebElement ele = null;
+		WebElement parentWebelement = getWebElement(parentElement); 
+		
+		try {
+			if (element.getLocator().equalsIgnoreCase("xpath")) {
+				ele = parentWebelement.findElement(By.xpath(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("id")) {
+				ele = parentWebelement.findElement(By.id(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("name")) {
+				ele = parentWebelement.findElement(By.name(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("linktext")) {
+				ele = parentWebelement.findElement(By.linkText(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("partiallinktext")) {
+				ele = parentWebelement.findElement(By.partialLinkText(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("classname")) {
+				ele = parentWebelement.findElement(By.className(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("tagname")) {
+				ele = parentWebelement.findElement(By.tagName(element.getValue()));
+			} else if (element.getLocator().equalsIgnoreCase("css")) {
+				ele = parentWebelement.findElement(By.cssSelector(element.getValue()));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail("Not able to find elements for " + element.getName());
+			// Assert.fail();
+		}
+		if (ele == null) {
+			Assert.fail("Not able to find elements for " + element.getName());
+		}
+		return ele;
+	}
+
 	
 	public boolean waitForElement(WebPageElements ele, int seconds) {
 		try {
@@ -156,6 +226,20 @@ public class SeleniumUtilities {
 			Assert.fail("Not able to click " + ele.getName());
 		}
 		return text;
+	}
+	
+	public ArrayList<WebPageElements> getWebPageElements(WebPageElements ele) {
+		ArrayList<WebPageElements> webPageElements = new ArrayList<WebPageElements>();
+		try {
+			List<WebElement> webElements = getWebElements(ele);
+			for(int i=1;i<=webElements.size();i++) {
+				webPageElements.add(new WebPageElements(ele.getName() + i, ele.getLocator(), ele.getValue()+"["+i+"]"));
+			}
+		}
+		catch (Exception e) {
+			Assert.fail("Get Web Elements error " + e.getMessage());
+		}
+		return webPageElements;
 	}
 	
 	public void clearText(WebPageElements ele) {
