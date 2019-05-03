@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RedditTestSuit]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="testFiles.RedittTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="setup"/>
+          <include name="getSortedPosts"/>
+          <include name="getResult"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testFiles.RedittTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [RedditTestSuit] -->
