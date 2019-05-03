@@ -1,59 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="70665" started-at="2019-05-02T22:13:02Z" finished-at="2019-05-02T22:14:13Z">
+  <suite name="RedditTestSuit" duration-ms="28567" started-at="2019-05-03T21:19:34Z" finished-at="2019-05-03T21:20:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="70665" started-at="2019-05-02T22:13:02Z" finished-at="2019-05-02T22:14:13Z">
+    <test name="Test" duration-ms="28567" started-at="2019-05-03T21:19:34Z" finished-at="2019-05-03T21:20:02Z">
       <class name="testFiles.RedittTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="setUp" is-config="true" duration-ms="20669" started-at="2019-05-03T03:42:42Z" finished-at="2019-05-03T03:43:02Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testFiles.RedittTest@5b275dab]" name="setUp" is-config="true" duration-ms="16951" started-at="2019-05-04T02:49:17Z" finished-at="2019-05-04T02:49:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-03T03:43:02Z" finished-at="2019-05-03T03:43:02Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testFiles.RedittTest@5b275dab]" name="setup" is-config="true" duration-ms="1" started-at="2019-05-04T02:49:34Z" finished-at="2019-05-04T02:49:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="testLogin" duration-ms="13718" started-at="2019-05-03T03:43:02Z" finished-at="2019-05-03T03:43:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="getResult" is-config="true" duration-ms="2" started-at="2019-05-03T03:43:16Z" finished-at="2019-05-03T03:43:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testLogin status=SUCCESS method=RedittTest.testLogin()[pri:0, instance:testFiles.RedittTest@59fa1d9b] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-03T03:43:16Z" finished-at="2019-05-03T03:43:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getSortedPosts()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="getSortedPosts" duration-ms="56907" started-at="2019-05-03T03:43:16Z" finished-at="2019-05-03T03:44:13Z">
+        <test-method status="FAIL" signature="getSortedPosts()[pri:0, instance:testFiles.RedittTest@5b275dab]" name="getSortedPosts" duration-ms="28529" started-at="2019-05-04T02:49:34Z" finished-at="2019-05-04T02:50:02Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Not able to click Sort Dropdown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Not able to click Sort Dropdown
+	at org.testng.Assert.fail(Assert.java:94)
+	at utilities.SeleniumUtilities.click(SeleniumUtilities.java:327)
+	at testFiles.RedittTest.getSortedPosts(RedittTest.java:131)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getSortedPosts -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="getResult" is-config="true" duration-ms="0" started-at="2019-05-03T03:44:13Z" finished-at="2019-05-03T03:44:13Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testFiles.RedittTest@5b275dab]" name="getResult" is-config="true" duration-ms="2" started-at="2019-05-04T02:50:02Z" finished-at="2019-05-04T02:50:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getSortedPosts status=SUCCESS method=RedittTest.getSortedPosts()[pri:0, instance:testFiles.RedittTest@59fa1d9b] output={null}]]]>
+                <![CDATA[[TestResult name=getSortedPosts status=FAILURE method=RedittTest.getSortedPosts()[pri:0, instance:testFiles.RedittTest@5b275dab] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testFiles.RedittTest@59fa1d9b]" name="teardown" is-config="true" duration-ms="1107" started-at="2019-05-03T03:44:13Z" finished-at="2019-05-03T03:44:14Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testFiles.RedittTest@5b275dab]" name="teardown" is-config="true" duration-ms="1481" started-at="2019-05-04T02:50:02Z" finished-at="2019-05-04T02:50:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- testFiles.RedittTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- RedditTestSuit -->
 </testng-results>

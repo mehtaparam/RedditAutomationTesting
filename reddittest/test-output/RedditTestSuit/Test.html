@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 03 02:46:08 IST 2019</td>
+<td>Started on:</td><td>Sat May 04 02:49:34 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>56 seconds (56753 ms)</td>
+<tr><td>Total time:</td><td>28 seconds (28567 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,15 +76,14 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testFiles.RedittTest.getSortedPosts()'><b>getSortedPosts</b><br>Test class: testFiles.RedittTest</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at testFiles.RedittTest.getSortedPosts(RedittTest.java:117)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace511651343", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace511651343'><pre>java.lang.IndexOutOfBoundsException: Index: 5, Size: 5
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at testFiles.RedittTest.getSortedPosts(RedittTest.java:117)
+<td><div><pre>java.lang.AssertionError: Not able to click Sort Dropdown
+	at utilities.SeleniumUtilities.click(SeleniumUtilities.java:327)
+	at testFiles.RedittTest.getSortedPosts(RedittTest.java:131)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1201004240", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1201004240'><pre>java.lang.AssertionError: Not able to click Sort Dropdown
+	at org.testng.Assert.fail(Assert.java:94)
+	at utilities.SeleniumUtilities.click(SeleniumUtilities.java:327)
+	at testFiles.RedittTest.getSortedPosts(RedittTest.java:131)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -110,8 +109,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>56</td>
-<td>testFiles.RedittTest@59fa1d9b</td></tr>
+<td>28</td>
+<td>testFiles.RedittTest@5b275dab</td></tr>
 </table><p>
 </body>
 </html>
