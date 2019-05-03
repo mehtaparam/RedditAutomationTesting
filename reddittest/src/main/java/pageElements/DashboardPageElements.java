@@ -21,5 +21,16 @@ public class DashboardPageElements {
 	////*[@id="SHORTCUT_FOCUSABLE_DIV"]/div[2]/div/div/div/div[2]/div[4]/div[1]/div[1]/div[1]//descendant::button//following-sibling::div
 	public static WebPageElements redditUserName = new WebPageElements("Reddit Username", "xpath", ".//a[contains(text(),'u/')]");
 	
+	
+	
 	public static WebPageElements upVotes = new WebPageElements("Upvotes", "xpath", ".//button//following-sibling::div[1]");
+	
+	
+	//public static WebPageElements subReddit = new WebPageElements("Subreddit", "xpath", "img[@role=\"presentation\"]/following-sibling::a/span");	
+	public static WebPageElements subReddit = new WebPageElements("Subreddit", "xpath", "//a/span[contains(text(),'r/')]");
+	
+	public static WebPageElements promoted = new WebPageElements("Promoted", "xpath", "//span[text()=\"promoted\"]");
+	
+	public static WebPageElements overlayScrollContainer = new WebPageElements("overlayScrollContainer", "id", "overlayScrollContainer");
+	
 }
