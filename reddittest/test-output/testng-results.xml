@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="RedditSuite" duration-ms="120710" started-at="2019-05-05T18:57:58Z" finished-at="2019-05-05T18:59:59Z">
+  <suite name="RedditSuite" duration-ms="112318" started-at="2019-05-05T19:20:40Z" finished-at="2019-05-05T19:22:33Z">
     <groups>
     </groups>
-    <test name="RedditTest" duration-ms="120710" started-at="2019-05-05T18:57:58Z" finished-at="2019-05-05T18:59:59Z">
+    <test name="RedditTest" duration-ms="112318" started-at="2019-05-05T19:20:40Z" finished-at="2019-05-05T19:22:33Z">
       <class name="testSuit.RedittTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testSuit.RedittTest@29774679]" name="setUp" is-config="true" duration-ms="30277" started-at="2019-05-06T00:27:28Z" finished-at="2019-05-06T00:27:58Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testSuit.RedittTest@29774679]" name="setUp" is-config="true" duration-ms="26314" started-at="2019-05-06T00:50:14Z" finished-at="2019-05-06T00:50:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:testSuit.RedittTest@29774679]" name="testLogin" duration-ms="18037" started-at="2019-05-06T00:27:58Z" finished-at="2019-05-06T00:28:17Z">
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:testSuit.RedittTest@29774679]" name="testLogin" duration-ms="4128" started-at="2019-05-06T00:50:40Z" finished-at="2019-05-06T00:50:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testSuit.RedittTest@29774679]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-06T00:27:58Z" finished-at="2019-05-06T00:27:58Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testSuit.RedittTest@29774679]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-06T00:50:40Z" finished-at="2019-05-06T00:50:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testSuit.RedittTest@29774679]" name="getResult" is-config="true" duration-ms="1081" started-at="2019-05-06T00:28:17Z" finished-at="2019-05-06T00:28:18Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testSuit.RedittTest@29774679]" name="getResult" is-config="true" duration-ms="14084" started-at="2019-05-06T00:50:44Z" finished-at="2019-05-06T00:50:58Z">
           <params>
             <param index="0">
               <value>
@@ -30,15 +30,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testSuit.RedittTest@29774679]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-06T00:28:18Z" finished-at="2019-05-06T00:28:18Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testSuit.RedittTest@29774679]" name="setup" is-config="true" duration-ms="1" started-at="2019-05-06T00:50:58Z" finished-at="2019-05-06T00:50:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:testSuit.RedittTest@29774679]" name="verifyLogin" duration-ms="873" started-at="2019-05-06T00:28:18Z" finished-at="2019-05-06T00:28:18Z">
+        <test-method status="PASS" signature="verifyLogin()[pri:0, instance:testSuit.RedittTest@29774679]" name="verifyLogin" duration-ms="712" started-at="2019-05-06T00:50:58Z" finished-at="2019-05-06T00:50:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testSuit.RedittTest@29774679]" name="getResult" is-config="true" duration-ms="681" started-at="2019-05-06T00:28:18Z" finished-at="2019-05-06T00:28:19Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testSuit.RedittTest@29774679]" name="getResult" is-config="true" duration-ms="656" started-at="2019-05-06T00:50:59Z" finished-at="2019-05-06T00:51:00Z">
           <params>
             <param index="0">
               <value>
@@ -49,15 +49,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="readPosts()[pri:0, instance:testSuit.RedittTest@29774679]" name="readPosts" duration-ms="99348" started-at="2019-05-06T00:28:19Z" finished-at="2019-05-06T00:29:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- readPosts -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testSuit.RedittTest@29774679]" name="setup" is-config="true" duration-ms="0" started-at="2019-05-06T00:28:19Z" finished-at="2019-05-06T00:28:19Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testSuit.RedittTest@29774679]" name="setup" is-config="true" duration-ms="1" started-at="2019-05-06T00:51:00Z" finished-at="2019-05-06T00:51:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testSuit.RedittTest@29774679]" name="getResult" is-config="true" duration-ms="653" started-at="2019-05-06T00:29:59Z" finished-at="2019-05-06T00:29:59Z">
+        <test-method status="PASS" signature="readPosts()[pri:0, instance:testSuit.RedittTest@29774679]" name="readPosts" duration-ms="91866" started-at="2019-05-06T00:51:00Z" finished-at="2019-05-06T00:52:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- readPosts -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:testSuit.RedittTest@29774679]" name="getResult" is-config="true" duration-ms="845" started-at="2019-05-06T00:52:32Z" finished-at="2019-05-06T00:52:33Z">
           <params>
             <param index="0">
               <value>
@@ -68,7 +68,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:testSuit.RedittTest@29774679]" name="teardown" is-config="true" duration-ms="4632" started-at="2019-05-06T00:29:59Z" finished-at="2019-05-06T00:30:04Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:testSuit.RedittTest@29774679]" name="teardown" is-config="true" duration-ms="4744" started-at="2019-05-06T00:52:33Z" finished-at="2019-05-06T00:52:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
