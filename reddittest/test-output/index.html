@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -36,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-RedditTestSuit">
-              <span class="suite-name border-failed">RedditTestSuit</span>
+            <a href="#" class="navigator-link" panel-name="suite-RedditSuite">
+              <span class="suite-name border-passed">RedditSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-RedditTestSuit">
+                  <a href="#" class="navigator-link " panel-name="test-xml-RedditSuite">
                     <span>C:\Users\Param\git\reddit_repository\reddittest\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-RedditTestSuit">
+                  <a href="#" class="navigator-link " panel-name="testlist-RedditSuite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-RedditTestSuit">
+                  <a href="#" class="navigator-link " panel-name="group-RedditSuite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-RedditTestSuit">
+                  <a href="#" class="navigator-link " panel-name="times-RedditSuite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-RedditTestSuit">
+                  <a href="#" class="navigator-link " panel-name="reporter-RedditSuite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-RedditTestSuit">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-RedditSuite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-RedditTestSuit">
+                  <a href="#" class="navigator-link " panel-name="chronological-RedditSuite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,21 +90,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-RedditTestSuit" class="hide-methods failed suite-RedditTestSuit"> (hide)</a> <!-- hide-methods failed suite-RedditTestSuit -->
-                      <a href="#" panel-name="suite-RedditTestSuit" class="show-methods failed suite-RedditTestSuit"> (show)</a> <!-- show-methods failed suite-RedditTestSuit -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-RedditSuite" class="hide-methods passed suite-RedditSuite"> (hide)</a> <!-- hide-methods passed suite-RedditSuite -->
+                      <a href="#" panel-name="suite-RedditSuite" class="show-methods passed suite-RedditSuite"> (show)</a> <!-- show-methods passed suite-RedditSuite -->
                     </span>
-                    <div class="method-list-content failed suite-RedditTestSuit">
+                    <div class="method-list-content passed suite-RedditSuite">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RedditTestSuit" title="testFiles.RedittTest" hash-for-method="getSortedPosts">getSortedPosts</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RedditSuite" title="testSuit.RedittTest" hash-for-method="readPosts">readPosts</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-RedditTestSuit -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RedditSuite" title="testSuit.RedittTest" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RedditSuite" title="testSuit.RedittTest" hash-for-method="verifyLogin">verifyLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-RedditSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -115,57 +125,38 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-RedditTestSuit" class="panel RedditTestSuit">
-          <div class="suite-RedditTestSuit-class-failed">
+        <div panel-name="suite-RedditSuite" class="panel RedditSuite">
+          <div class="suite-RedditSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testFiles.RedittTest</span>
+              <img src="passed.png"/>
+              <span class="class-name">testSuit.RedittTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="getSortedPosts">
-                  </a> <!-- getSortedPosts -->
-                  <span class="method-name">getSortedPosts</span>
-                  <div class="stack-trace"><b>"java.lang.AssertionError: Not able to click Sort Dropdown
-	at utilities.SeleniumUtilities.click(SeleniumUtilities.java:327)
-	at testFiles.RedittTest.getSortedPosts(RedittTest.java:131)
-... Removed 25 stack frames<br/> java.lang.AssertionError: Not able to click Sort Dropdown
-	at org.testng.Assert.fail(Assert.java:94)
-	at utilities.SeleniumUtilities.click(SeleniumUtilities.java:327)
-	at testFiles.RedittTest.getSortedPosts(RedittTest.java:131)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-"</b><br>org.testng.Assert.fail(Assert.java:94)<br>utilities.SeleniumUtilities.click(SeleniumUtilities.java:327)<br>testFiles.RedittTest.getSortedPosts(RedittTest.java:131)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br>org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br>org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)<br>
-</div> <!-- stack-trace -->
+                  <a name="readPosts">
+                  </a> <!-- readPosts -->
+                  <span class="method-name">readPosts</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin">
+                  </a> <!-- testLogin -->
+                  <span class="method-name">testLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLogin">
+                  </a> <!-- verifyLogin -->
+                  <span class="method-name">verifyLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-RedditTestSuit-class-failed -->
-        </div> <!-- panel RedditTestSuit -->
-        <div panel-name="test-xml-RedditTestSuit" class="panel">
+          </div> <!-- suite-RedditSuite-class-passed -->
+        </div> <!-- panel RedditSuite -->
+        <div panel-name="test-xml-RedditSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">C:\Users\Param\git\reddit_repository\reddittest\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
@@ -173,113 +164,136 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;RedditTestSuit&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+&lt;suite name=&quot;RedditSuite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;RedditTest&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testFiles.RedittTest&quot;/&gt;
+      &lt;class name=&quot;testSuit.RedittTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- RedditTestSuit --&gt;
+  &lt;/test&gt; &lt;!-- RedditTest --&gt;
+&lt;/suite&gt; &lt;!-- RedditSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-RedditTestSuit" class="panel">
+        <div panel-name="testlist-RedditSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for RedditTestSuit</span>
+            <span class="header-content">Tests for RedditSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">RedditTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-RedditTestSuit" class="panel">
+        <div panel-name="group-RedditSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for RedditTestSuit</span>
+            <span class="header-content">Groups for RedditSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-RedditTestSuit" class="panel">
+        <div panel-name="times-RedditSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for RedditTestSuit</span>
+            <span class="header-content">Times for RedditSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_RedditTestSuit');
-function tableData_RedditTestSuit() {
+suiteTableInitFunctions.push('tableData_RedditSuite');
+function tableData_RedditSuite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'getSortedPosts')
-data.setCell(0, 2, 'testFiles.RedittTest')
-data.setCell(0, 3, 28529);
-window.suiteTableData['RedditTestSuit']= { tableData: data, tableDiv: 'times-div-RedditTestSuit'}
+data.setCell(0, 1, 'readPosts')
+data.setCell(0, 2, 'testSuit.RedittTest')
+data.setCell(0, 3, 99348);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testLogin')
+data.setCell(1, 2, 'testSuit.RedittTest')
+data.setCell(1, 3, 18037);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyLogin')
+data.setCell(2, 2, 'testSuit.RedittTest')
+data.setCell(2, 3, 873);
+window.suiteTableData['RedditSuite']= { tableData: data, tableDiv: 'times-div-RedditSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 28 seconds</span>
-              <div id="times-div-RedditTestSuit">
-              </div> <!-- times-div-RedditTestSuit -->
+              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <div id="times-div-RedditSuite">
+              </div> <!-- times-div-RedditSuite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-RedditTestSuit" class="panel">
+        <div panel-name="reporter-RedditSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for RedditTestSuit</span>
+            <span class="header-content">Reporter output for RedditSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-RedditTestSuit" class="panel">
+        <div panel-name="ignored-methods-RedditSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testFiles.RedittTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">testLogin</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-RedditTestSuit" class="panel">
+        <div panel-name="chronological-RedditSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testFiles.RedittTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testSuit.RedittTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">16978 ms</span>
+                <span class="method-start">30301 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">getSortedPosts</span>
-                <span class="method-start">16979 ms</span>
+                <span class="method-name">testLogin</span>
+                <span class="method-start">30301 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=getSortedPosts status=FAILURE method=RedittTest.getSortedPosts()[pri:0, instance:te...)</span>
-                <span class="method-start">45513 ms</span>
+                <span class="method-name">getResult([TestResult name=testLogin status=SUCCESS method=RedittTest.testLogin()[pri:0, instance:testSuit.Red...)</span>
+                <span class="method-start">48341 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">49423 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLogin</span>
+                <span class="method-start">49423 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=verifyLogin status=SUCCESS method=RedittTest.verifyLogin()[pri:0, instance:testSuit...)</span>
+                <span class="method-start">50298 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">50981 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">readPosts</span>
+                <span class="method-start">50981 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=readPosts status=SUCCESS method=RedittTest.readPosts()[pri:0, instance:testSuit.Red...)</span>
+                <span class="method-start">150332 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">45549 ms</span>
+                <span class="method-start">151031 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

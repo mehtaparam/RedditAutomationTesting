@@ -21,16 +21,34 @@ public class DashboardPageElements {
 	////*[@id="SHORTCUT_FOCUSABLE_DIV"]/div[2]/div/div/div/div[2]/div[4]/div[1]/div[1]/div[1]//descendant::button//following-sibling::div
 	public static WebPageElements redditUserName = new WebPageElements("Reddit Username", "xpath", ".//a[contains(text(),'u/')]");
 	
+	//public static WebPageElements catagoryName = new WebPageElements("Catagory Name", "xpath", "//div[contains(text(),'Sort')]/following-sibling::div/button/span");
 	
+	public static WebPageElements catagoryName = new WebPageElements("Catagory Name", "xpath", "//button[@id=\"ListingSort--SortPicker\"]/span");
+	
+
 	
 	public static WebPageElements upVotes = new WebPageElements("Upvotes", "xpath", ".//button//following-sibling::div[1]");
 	
+	public static WebPageElements title = new WebPageElements("Title", "xpath", ".//h2"); 	
 	
 	//public static WebPageElements subReddit = new WebPageElements("Subreddit", "xpath", "img[@role=\"presentation\"]/following-sibling::a/span");	
-	public static WebPageElements subReddit = new WebPageElements("Subreddit", "xpath", "//a/span[contains(text(),'r/')]");
+	public static WebPageElements subReddit = new WebPageElements("Subreddit", "xpath", "//a[contains(text(),'r/')]");
 	
-	public static WebPageElements promoted = new WebPageElements("Promoted", "xpath", "//span[text()=\"promoted\"]");
+	public static WebPageElements imageElement = new WebPageElements("Image Element", "xpath", ".//img[contains(@class,'media-element')]");
+
+	public static WebPageElements videoElement = new WebPageElements("Video Element", "xpath", ".//video[contains(@class,'HTML5StreamPlayer__video__regular')]");
+		
+	public static WebPageElements promoted = new WebPageElements("Promoted", "xpath", ".//span[text()='promoted']/following-sibling::span[@role=\"presentation\"]");
 	
 	public static WebPageElements overlayScrollContainer = new WebPageElements("overlayScrollContainer", "id", "overlayScrollContainer");
+	
+	public static WebPageElements paragraphText = new WebPageElements("Paragraph Div for Post's Text", "xpath", ".//div[@data-click-id='text']/div/p");
+	
+	public static ArrayList<WebPageElements> paragraphTextArrayList;
+	//
+	
+	//div/div/button/div/i[contains(@class,'icon')]
+	//div[contains(text(),'Sort')]/parent:://button[]
+	
 	
 }

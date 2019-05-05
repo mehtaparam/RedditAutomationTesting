@@ -16,35 +16,36 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import constants.ConfigConstants;
+import constants.StaticConfiguration;
 import model.WebPageElements;
+import pageElements.DashboardPageElements;
 
 public class SeleniumUtilities {
-	public WebDriver driver;
+
 
 	public void closeAllTabs() {
-		String originalHandle = driver.getWindowHandle();
+		String originalHandle = StaticConfiguration.WEB_DRIVER.getWindowHandle();
 		// Do something to open new tabs
 
-		for (String handle : driver.getWindowHandles()) {
+		for (String handle : StaticConfiguration.WEB_DRIVER.getWindowHandles()) {
 			if (!handle.equals(originalHandle)) {
-				driver.switchTo().window(handle);
-				driver.close();
+				StaticConfiguration.WEB_DRIVER.switchTo().window(handle);
+				StaticConfiguration.WEB_DRIVER.close();
 			}
 		}
-		driver.switchTo().window(originalHandle);
+		StaticConfiguration.WEB_DRIVER.switchTo().window(originalHandle);
 	}
 	
 	public String closeTab(int index) {
 		String basicHandle = "";
 		int counter=0;
-		for (String handle : driver.getWindowHandles()) {
+		for (String handle : StaticConfiguration.WEB_DRIVER.getWindowHandles()) {
 			if(counter == 0) {
-				 basicHandle = driver.getWindowHandle();
+				 basicHandle = StaticConfiguration.WEB_DRIVER.getWindowHandle();
 			}
 			else if (counter == index) {
-				driver.switchTo().window(handle);
-				driver.close();
+				StaticConfiguration.WEB_DRIVER.switchTo().window(handle);
+				StaticConfiguration.WEB_DRIVER.close();
 			}
 			System.out.println("Colse TAB Counter " + counter);
 			counter++;
@@ -55,9 +56,9 @@ public class SeleniumUtilities {
 
 	public void moveToTab(int index) {
 		int counter=0;
-		for (String handle : driver.getWindowHandles()) {
+		for (String handle : StaticConfiguration.WEB_DRIVER.getWindowHandles()) {
 			if (counter == index) {
-				driver.switchTo().window(handle);
+				StaticConfiguration.WEB_DRIVER.switchTo().window(handle);
 			}
 			System.out.println("Move Tab Counter " + counter);
 			counter++;
@@ -66,7 +67,7 @@ public class SeleniumUtilities {
 
 	public void closeCurrentTAB() {
 		try {
-			Actions action = new Actions(driver);
+			Actions action = new Actions(StaticConfiguration.WEB_DRIVER);
 			action.keyDown(Keys.CONTROL).sendKeys("W").build().perform();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -77,7 +78,7 @@ public class SeleniumUtilities {
 
 		try {
 			WebElement element = getWebElement(ele);
-			Actions builder = new Actions(driver);
+			Actions builder = new Actions(StaticConfiguration.WEB_DRIVER);
 			Action seriesOfActions = builder.keyDown(Keys.CONTROL).click(element).build();
 			seriesOfActions.perform();
 		} catch (Exception e) {
@@ -123,21 +124,21 @@ public class SeleniumUtilities {
 		WebElement ele = null;
 		try {
 			if (element.getLocator().equalsIgnoreCase("xpath")) {
-				ele = driver.findElement(By.xpath(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElement(By.xpath(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("id")) {
-				ele = driver.findElement(By.id(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElement(By.id(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("name")) {
-				ele = driver.findElement(By.name(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElement(By.name(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("linktext")) {
-				ele = driver.findElement(By.linkText(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElement(By.linkText(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("partiallinktext")) {
-				ele = driver.findElement(By.partialLinkText(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElement(By.partialLinkText(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("classname")) {
-				ele = driver.findElement(By.className(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElement(By.className(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("tagname")) {
-				ele = driver.findElement(By.tagName(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElement(By.tagName(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("css")) {
-				ele = driver.findElement(By.cssSelector(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElement(By.cssSelector(element.getValue()));
 			}
 
 		} catch (Exception e) {
@@ -146,6 +147,7 @@ public class SeleniumUtilities {
 			// Assert.fail();
 		}
 		if (ele == null) {
+			System.out.println("Not able to find element ");
 			Assert.fail("Not able to find element " + element.getName());
 		}
 		return ele;
@@ -155,21 +157,21 @@ public class SeleniumUtilities {
 		List ele = null;
 		try {
 			if (element.getLocator().equalsIgnoreCase("xpath")) {
-				ele = driver.findElements(By.xpath(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElements(By.xpath(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("id")) {
-				ele = driver.findElements(By.id(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElements(By.id(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("name")) {
-				ele = driver.findElements(By.name(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElements(By.name(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("linktext")) {
-				ele = driver.findElements(By.linkText(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElements(By.linkText(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("partiallinktext")) {
-				ele = driver.findElements(By.partialLinkText(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElements(By.partialLinkText(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("classname")) {
-				ele = driver.findElements(By.className(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElements(By.className(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("tagname")) {
-				ele = driver.findElements(By.tagName(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElements(By.tagName(element.getValue()));
 			} else if (element.getLocator().equalsIgnoreCase("css")) {
-				ele = driver.findElements(By.cssSelector(element.getValue()));
+				ele = StaticConfiguration.WEB_DRIVER.findElements(By.cssSelector(element.getValue()));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -205,24 +207,19 @@ public class SeleniumUtilities {
 				ele = parentWebelement.findElement(By.cssSelector(element.getValue()));
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
-			Assert.fail("Not able to find elements for " + element.getName());
+			//e.printStackTrace();
+			//Assert.fail("Not able to find elements for " + element.getName());
 			// Assert.fail();
 		}
 		if (ele == null) {
-			Assert.fail("Not able to find elements for " + element.getName());
+			//Assert.fail("Not able to find elements for " + element.getName());
 		}
 		return ele;
 	}
 
-	/*
-	 * public WebPageElements getChildWebElement(WebPageElements
-	 * element,WebPageElements parentElement) { return new WebPageElements }
-	 */
-
-	public boolean waitForElement(WebPageElements ele, int seconds) {
+	public boolean waitForWebPageElement(WebPageElements ele, int seconds) {
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, seconds);
+			WebDriverWait wait = new WebDriverWait(StaticConfiguration.WEB_DRIVER, seconds);
 			if (ele.getLocator().equalsIgnoreCase("xpath")) {
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ele.getValue())));
 			} else if (ele.getLocator().equalsIgnoreCase("id")) {
@@ -242,11 +239,22 @@ public class SeleniumUtilities {
 			return false;
 		}
 	}
+	
+	public boolean waitForElement(WebElement ele, int seconds) {
+		try {
+			WebDriverWait wait = new WebDriverWait(StaticConfiguration.WEB_DRIVER, seconds);
+				wait.until(ExpectedConditions.visibilityOf(ele));
+			return true;
+		} catch (Exception e) {
+			// e.printStackTrace();
+			return false;
+		}
+	}
 
 	public boolean switchToFrameByElemenet(WebPageElements ele) {
 		try {
 			WebElement element = getWebElement(ele);
-			driver.switchTo().frame(element);
+			StaticConfiguration.WEB_DRIVER.switchTo().frame(element);
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -257,7 +265,7 @@ public class SeleniumUtilities {
 
 	public boolean switchToParentFrame() {
 		try {
-			driver.switchTo().defaultContent();
+			StaticConfiguration.WEB_DRIVER.switchTo().defaultContent();
 			return true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -267,14 +275,11 @@ public class SeleniumUtilities {
 	}
 
 	public WebPageElements getRunTimeWebElement(String name, String locator, String value) {
-		System.out.println("Name For Runtime Element: " + name);
-		System.out.println("Name For Runtime Locator: " + locator);
-		System.out.println("Name For Runtime Value: " + value);
 		return new WebPageElements(name, locator, value);
 	}
 
 	public boolean waitForRequiredElement(WebPageElements ele, int second) {
-		if (waitForElement(ele, second)) {
+		if (waitForWebPageElement(ele, second)) {
 			return true;
 		} else {
 			Assert.fail("Not able to find " + ele.getName() + " after " + second + " seconds.");
@@ -297,7 +302,9 @@ public class SeleniumUtilities {
 		String text = null;
 		try {
 			WebElement element = getWebElement(ele);
-			text = element.getAttribute("text");
+			text = element.getText();
+			if(text == "")
+				text = element.getAttribute("text");
 			/* System.out.println(text); */
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -333,6 +340,10 @@ public class SeleniumUtilities {
 		try {
 			List<WebElement> webElements = getWebElements(ele);
 			for (int i = 1; i <= webElements.size(); i++) {
+				
+				/*System.out.println(ele.getName() + i);
+				System.out.println(ele.getValue() + "[" + i + "]");
+				*/
 				webPageElements
 						.add(new WebPageElements(ele.getName() + i, ele.getLocator(), ele.getValue() + "[" + i + "]"));
 			}
@@ -340,6 +351,25 @@ public class SeleniumUtilities {
 			Assert.fail("Get Web Elements error " + e.getMessage());
 		}
 		return webPageElements;
+	}
+	
+	
+	public String getParagraphText(WebPageElements post) {
+		String text = "";
+		try {
+			WebElement element = getWebElement(post);
+			List<WebElement> webElements = element.findElements(By.xpath(DashboardPageElements.paragraphText.getValue()));
+						
+			for (WebElement paragraphs:webElements) {
+				text = text + paragraphs.getText() + "<br>";
+			}
+			
+			System.out.println("Paragraph Text" + text);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return text;
 	}
 
 	public void clearText(WebPageElements ele) {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="RedditTestSuit">
-  <test thread-count="5" name="Test">
+<suite name="RedditSuite">
+  <test thread-count="5" name="RedditTest">
     <classes>
-      <class name="testFiles.RedittTest"/>
+      <class name="testSuit.RedittTest"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- RedditTestSuit -->
+  </test> <!-- RedditTest -->
+</suite> <!-- RedditSuite -->

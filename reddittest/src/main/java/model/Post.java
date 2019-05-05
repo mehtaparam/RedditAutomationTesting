@@ -1,14 +1,22 @@
 package model;
 
 public class Post {
-	String catagory;
-	String title;
-	String text;
-	String mediaURL;
-	String upVotes;
-	String userName;
-	String subReddit;
-	String mediaType;
+	String catagory = "";
+	String title = "";
+	String text = "";
+	String mediaURL = "";
+	String upVotes = "";
+	String userName = "";
+	String subReddit = "";
+	String mediaType = "";
+	int postID = 0;
+	
+	public int getPostID() {
+		return postID;
+	}
+	public void setPostID(int postID) {
+		this.postID = postID;
+	}
 	public String getCatagory() {
 		return catagory;
 	}

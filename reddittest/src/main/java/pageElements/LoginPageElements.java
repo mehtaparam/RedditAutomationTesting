@@ -10,6 +10,6 @@ public class LoginPageElements {
 	public static WebPageElements incorrectUserNameErrorMessage = new WebPageElements("Incorrect Username Error","xpath", "//div[text()='Incorrect username or password']");
 	public static WebPageElements incorrectPasswordErrorMessage = new WebPageElements("Incorrect Password Error","xpath", "//div[text()='Incorrect password']");
 
-	public static WebPageElements signInButton = new WebPageElements("Login Button", "xpath", "//button[@type='submit']");
+	public static WebPageElements signInButton = new WebPageElements("Login Button", "xpath", "//button[text()='Sign in']");
 
 }
