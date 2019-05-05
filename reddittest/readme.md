@@ -18,7 +18,7 @@
 > 1 Open URL https://www.reddit.com/
 
 @Test 1
-> 2 Click on Login option from dashboard
+> 2 Click on Login option from dash board
 
 > 3 Switch context to Login frame
 
@@ -26,12 +26,13 @@
 
 > 5 Click on Login
 
+@Test 2
 > 6 Verify for any error (You can off this verification check by constants.ConfigConstants)
 
 > 7 It will verify login by creating dynamic xpath based on username and for a now it will print success message in console.
 
 
-@Test 2
+@Test 3
 > 8 It will read categories list to get total categories
 
 > 9 It will click on categories from the list one by one
