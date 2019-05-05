@@ -1,0 +1,945 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>May 5, 2019 11:32:54 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Login Functionality</span>
+						<span class='test-time'>May 5, 2019 11:32:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 5, 2019 11:32:54 PM</span>
+	<span class='label end-time'>May 5, 2019 11:33:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+107ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:32:59 PM</td>
+				<td class='step-details'>
+						User Credentials Entered
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:33:07 PM</td>
+				<td class='step-details'>
+						Test Case Passed Successfylly
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Login Verification</span>
+						<span class='test-time'>May 5, 2019 11:33:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 5, 2019 11:33:07 PM</span>
+	<span class='label end-time'>May 5, 2019 11:33:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+347ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:33:09 PM</td>
+				<td class='step-details'>
+						User mehtaparam Logged in sucessfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:33:10 PM</td>
+				<td class='step-details'>
+						Test Case Passed Successfylly
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Read Posts</span>
+						<span class='test-time'>May 5, 2019 11:33:10 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 5, 2019 11:33:10 PM</span>
+	<span class='label end-time'>May 5, 2019 11:34:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 29s+341ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:11 PM</td>
+				<td class='step-details'>
+						Total Categories: 6
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:25 PM</td>
+				<td class='step-details'>
+						Category Name :BEST
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:26 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "BEST",
+  "title": "This circuit board telling you to visit the Maldives",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/um4bvzkoqdw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003dcc1f4efd0b5aa9930143b2cbea96508f7b5c607b",
+  "upVotes": "3.1k",
+  "userName": "u/reecew22",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 1
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:27 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "BEST",
+  "title": "This picture of a dog I took. Sitting right on the edge of shadow (Sahara Desert).",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/k1okvyjoeew21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003db240b72fada256c721446b9814c3b479c6e49838",
+  "upVotes": "819",
+  "userName": "u/philippol",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 2
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:28 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "BEST",
+  "title": "Small Russian town of Kamyshin has hand drawn posters at the local cinema",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/rzo3042vrew21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d5448e3a1a8ecdfc1442edae1767b3fee191b2d3b",
+  "upVotes": "339",
+  "userName": "u/redcat10601",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 3
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:29 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "BEST",
+  "title": "Chocolate treats that taste exactly like the bottom of Drumsticks.",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/2r09h1otlbw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d8111427adb3121bef3c4a5595c61df575dd1532e",
+  "upVotes": "2.4k",
+  "userName": "u/summer_97",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 4
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:30 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "BEST",
+  "title": "I found this crudely pressed nazi coin in the woods, UK.",
+  "text": "",
+  "mediaURL": "",
+  "upVotes": "552",
+  "userName": "u/Digitek50",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "",
+  "postID": 5
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:37 PM</td>
+				<td class='step-details'>
+						Category Name :HOT
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:37 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "HOT",
+  "title": "This circuit board telling you to visit the Maldives",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/um4bvzkoqdw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003dcc1f4efd0b5aa9930143b2cbea96508f7b5c607b",
+  "upVotes": "3.1k",
+  "userName": "u/reecew22",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 6
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:38 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "HOT",
+  "title": "This picture of a dog I took. Sitting right on the edge of shadow (Sahara Desert).",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/k1okvyjoeew21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003db240b72fada256c721446b9814c3b479c6e49838",
+  "upVotes": "828",
+  "userName": "u/philippol",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 7
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:39 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "HOT",
+  "title": "Small Russian town of Kamyshin has hand drawn posters at the local cinema",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/rzo3042vrew21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d5448e3a1a8ecdfc1442edae1767b3fee191b2d3b",
+  "upVotes": "340",
+  "userName": "u/redcat10601",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 8
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:39 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "HOT",
+  "title": "Sign up for the Reddit Gifts Living Spaces \u0026 Mood Rooms gift Exchange by May 12th!",
+  "text": "",
+  "mediaURL": "https://external-preview.redd.it/MQg4bs_TEHkoXOSHD3tFRyoYuxSBuREpvoW2myuubZg.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d7038a24486b17be668d60f0bc310eb77e54446ed",
+  "upVotes": "•",
+  "userName": "u/reddit_exchanges",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 9
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:40 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "HOT",
+  "title": "Chocolate treats that taste exactly like the bottom of Drumsticks.",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/2r09h1otlbw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d8111427adb3121bef3c4a5595c61df575dd1532e",
+  "upVotes": "2.4k",
+  "userName": "u/summer_97",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 10
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:52 PM</td>
+				<td class='step-details'>
+						Category Name :NEW
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:53 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "NEW",
+  "title": "A termite that’s still alive with its wing stuck to bathroom tile",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/kli3d890nfw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d46bcd3bc2d6c70f9328d93a97aab653083f65006",
+  "upVotes": "•",
+  "userName": "u/Cannabis_Kramer",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 11
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:54 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "NEW",
+  "title": "The way the pollen settled in rain drops on my car.",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/6981es2umfw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d932843926c63e2717b4b4d65e692ffe7219ff5b8",
+  "upVotes": "•",
+  "userName": "u/brainfart420",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 12
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:54 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "NEW",
+  "title": "George Washington has a runny nose and eye crust...",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/5ul34q2mmfw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d52f343451a953d31155b53d5625065fe486df349",
+  "upVotes": "•",
+  "userName": "u/theclassybutler",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 13
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:55 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "NEW",
+  "title": "My tulip wilted to resemble an iris",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/ypesapalmfw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003de036be13bf002d4df446ea867ed88ac8c87a1359",
+  "upVotes": "•",
+  "userName": "u/mcknives",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 14
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:33:55 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "NEW",
+  "title": "Snowfall on the 5th of May",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/amhfocqvlfw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003dd4d5852ce416125a045baecb4982a67d32e80e18",
+  "upVotes": "•",
+  "userName": "u/AnActualPlatypus",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 15
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:07 PM</td>
+				<td class='step-details'>
+						Category Name :CONTROVERSIAL
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:07 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "CONTROVERSIAL",
+  "title": "The house I’m buying has upvotes around all the windows",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/mmfimat0q9w21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d1e549fa69b54f7b6cfb5799a1d528e9ca8e9d29b",
+  "upVotes": "0",
+  "userName": "u/dmannw",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 16
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:08 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "CONTROVERSIAL",
+  "title": "This wet floor sign shaped like a banana",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/4eak0beti8w21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d2296edac76e91a7583db0105173301bbb2070610",
+  "upVotes": "0",
+  "userName": "u/StrugglingWriter16",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 17
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:09 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "CONTROVERSIAL",
+  "title": "This shadow in my house looks like Texas",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/7v471wmwz8w21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003dfafad909e21844621f14466653b2c731f1d34421",
+  "upVotes": "3",
+  "userName": "u/Sbrudda",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 18
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:09 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "CONTROVERSIAL",
+  "title": "Sign up for the Zero Credit Reddit Gifts Magnets gift Exchange by May 12th!",
+  "text": "",
+  "mediaURL": "https://external-preview.redd.it/qknKvVMlIaHnuG4S2dc0i2gRtuGHnuMvqc_DInPYZwk.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003dca468459dec1b9f94275dfb2bd4d0c27d50139ba",
+  "upVotes": "•",
+  "userName": "u/reddit_exchanges",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 19
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:10 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "CONTROVERSIAL",
+  "title": "This house that looks like Darth Vader. Happy May 4th everyone.",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/g40crhk19bw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d92bb3870d58b097f3b57cda9ed2de00b24076244",
+  "upVotes": "6",
+  "userName": "u/MoofieMofo",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 20
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:21 PM</td>
+				<td class='step-details'>
+						Category Name :TOP
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:22 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "TOP",
+  "title": "My neighbors have a castle built on top of their garage",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/s87j1kezo8w21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003db5c178c58c1755c5a9d5237bed466255f0bd8d52",
+  "upVotes": "27.5k",
+  "userName": "u/Aryionius",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 21
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:22 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "TOP",
+  "title": "Sign up for the Reddit Gifts Pirates gift Exchange by May 12th!",
+  "text": "",
+  "mediaURL": "https://external-preview.redd.it/TF1_ZqHmyjE61FrDGCc8Rf-0k5dTa-J3Hso9XV_5ZZc.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d83e43ce4e2d7e147e98b7fb089408aca92b44925",
+  "upVotes": "•",
+  "userName": "u/reddit_exchanges",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 22
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:23 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "TOP",
+  "title": "This streetlight",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/h0iujccis9w21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003db41957e8da585a740f12702feebd791b654ddff0",
+  "upVotes": "5.0k",
+  "userName": "u/fg_hy_pitch",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 23
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:23 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "TOP",
+  "title": "Only five guys were working at the Five Guys I went to",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/bleo3p9koaw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003df720af5c229e589d7243bf137d94e0b6b5c0296d",
+  "upVotes": "3.6k",
+  "userName": "u/Wolfgang2002",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 24
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:24 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "TOP",
+  "title": "These pillows made to look like wood",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/l7agwn8o19w21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d30adc60f49ff065f82684734f00f24e92dbe599b",
+  "upVotes": "2.3k",
+  "userName": "u/AtomicZNTO",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 25
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:35 PM</td>
+				<td class='step-details'>
+						Category Name :RISING
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:36 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "RISING",
+  "title": "A chart showing companies of 11 large transnational corporations",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/ne11rgfz8fw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d3e5e7a236246d663cf4b5bb414d5cbbf2fc87cdd",
+  "upVotes": "•",
+  "userName": "u/YourHairIine",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 26
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:37 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "RISING",
+  "title": "My campus longhorn statue has a detailed butthole under its tail.",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/yrdmnoi8efw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d4beef35efedf5fda6d4576eb73d35a9d3e0254f9",
+  "upVotes": "•",
+  "userName": "u/Stripesthetiger",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 27
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:37 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "RISING",
+  "title": "Jeff Goldblum at the Baltimore Tattoo convention",
+  "text": "",
+  "mediaURL": "",
+  "upVotes": "•",
+  "userName": "u/willamsBILLwillams",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "",
+  "postID": 28
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:38 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "RISING",
+  "title": "This visual definition of specialty coffee options",
+  "text": "",
+  "mediaURL": "https://preview.redd.it/xy6bdhrqafw21.jpg?width\u003d640\u0026crop\u003dsmart\u0026auto\u003dwebp\u0026s\u003d0aaa711c305d8c47ad29bdd6a7c2391652c023e2",
+  "upVotes": "•",
+  "userName": "u/rjoyfult",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "Image",
+  "postID": 29
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>11:34:38 PM</td>
+				<td class='step-details'>
+						Post JSON <br><pre>{
+  "catagory": "RISING",
+  "title": "This chair is also a stair",
+  "text": "",
+  "mediaURL": "",
+  "upVotes": "•",
+  "userName": "u/ProximaTop",
+  "subReddit": "r/mildlyinteresting",
+  "mediaType": "",
+  "postID": 30
+}</pre>
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>11:34:39 PM</td>
+				<td class='step-details'>
+						Test Case Passed Successfylly
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='Screenshots\RISING\2019-05-05 23-34-38.png' src='Screenshots\RISING\2019-05-05 23-34-38.png' data-src='Screenshots\RISING\2019-05-05 23-34-38.png'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>3</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 5, 2019 11:32:54 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 5, 2019 11:34:39 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 1m 45s+192ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 3,
+				passParent: 3,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "Login Functionality":13.107,"Login Verification":2.347,"Read Posts":89.341
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
