@@ -364,8 +364,6 @@ public class SeleniumUtilities {
 				text = text + paragraphs.getText() + "<br>";
 			}
 			
-			System.out.println("Paragraph Text" + text);
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -135,7 +135,12 @@ public class RedittTest extends SeleniumUtilities {
 		if (StaticConfiguration.POSTS_ARRAY.size() > 0) {
 			// Write JSON file
 			try {
-				FileWriter file = new FileWriter("posts.json");
+				
+				FileWriter file = new FileWriter(StaticConfiguration.OUTPUT_DIRECTORY 
+						+ "\\" + StaticConfiguration.HTML_REPORT_DIRECTORY 
+						+ "\\" + Screenshot.date() 
+						+ "\\"+"posts.json");
+				
 				file.write(StaticConfiguration.POSTS_ARRAY.toJSONString());
 				file.flush();
 			} catch (IOException e) {

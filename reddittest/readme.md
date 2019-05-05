@@ -57,3 +57,9 @@
 
 	<Output Directory> / <Report Directory> / <Date>	 / htmlReport
 	TestResults		   / Report				/ 06-05-2019 / Screenshots
+
+> posts.json will be created in same manner with following directorory format
+
+
+	<Output Directory> / <Report Directory> / <Date>	 / posts.json
+	TestResults		   / Report				/ 06-05-2019 /  posts.json
